@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "server": "json-server --host 0.0.0.0 --port $PORT db.json"
-},
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "json-server --host 0.0.0.0 --port $PORT db.json"
+  },
   "dependencies": {
     "axios": "^1.19.0",
     "json-server": "^1.0.0-beta.15",
