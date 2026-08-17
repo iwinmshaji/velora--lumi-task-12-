@@ -1,0 +1,146 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 2499,
+      "stock": 15,
+      "rating": 4.5,
+      "sales": 120,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"
+    },
+    {
+      "id": 2,
+      "name": "Running Shoes",
+      "category": "Footwear",
+      "price": 3299,
+      "stock": 8,
+      "rating": 4.2,
+      "sales": 95,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 4999,
+      "stock": 12,
+      "rating": 4.7,
+      "sales": 150,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"
+    },
+    {
+      "id": 4,
+      "name": "Leather Backpack",
+      "category": "Bags",
+      "price": 1899,
+      "stock": 20,
+      "rating": 4.3,
+      "sales": 75,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600"
+    },
+    {
+      "id": 5,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 1599,
+      "stock": 0,
+      "rating": 4.1,
+      "sales": 60,
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600"
+    },
+    {
+      "id": 6,
+      "name": "Classic T-Shirt",
+      "category": "Clothing",
+      "price": 799,
+      "stock": 30,
+      "rating": 4.4,
+      "sales": 110,
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600"
+    },
+    {
+      "id": 7,
+      "name": "Gaming Mouse",
+      "category": "Electronics",
+      "price": 1299,
+      "stock": 18,
+      "rating": 4.6,
+      "sales": 135,
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600"
+    },
+    {
+      "id": 8,
+      "name": "Denim Jacket",
+      "category": "Clothing",
+      "price": 2499,
+      "stock": 6,
+      "rating": 4.5,
+      "sales": 80,
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600"
+    },
+    {
+      "id": 9,
+      "name": "Sports Water Bottle",
+      "category": "Accessories",
+      "price": 599,
+      "stock": 25,
+      "rating": 4.0,
+      "sales": 70,
+      "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=600"
+    },
+    {
+      "id": 10,
+      "name": "Sunglasses",
+      "category": "Accessories",
+      "price": 999,
+      "stock": 14,
+      "rating": 4.3,
+      "sales": 90,
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1001,
+      "customer": "John",
+      "date": "2026-08-05",
+      "status": "Delivered",
+      "total": 5499,
+      "items": 3
+    },
+    {
+      "id": 1002,
+      "customer": "Alex",
+      "date": "2026-08-07",
+      "status": "Pending",
+      "total": 3299,
+      "items": 1
+    },
+    {
+      "id": 1003,
+      "customer": "Sarah",
+      "date": "2026-08-09",
+      "status": "Shipped",
+      "total": 7499,
+      "items": 4
+    },
+    {
+      "id": 1004,
+      "customer": "David",
+      "date": "2026-08-11",
+      "status": "Delivered",
+      "total": 2499,
+      "items": 2
+    },
+    {
+      "id": 1005,
+      "customer": "Emma",
+      "date": "2026-08-13",
+      "status": "Cancelled",
+      "total": 1599,
+      "items": 1
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+import axios from "axios";
+
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:3000";
+
+const api = axios.create({
+  baseURL: API_URL,
+  headers: {
+    "Content-Type": "application/json"
+  }
+});
+
+// PRODUCTS
+
+export const getProducts = async () => {
+  const response = await api.get("/products");
+  return response.data;
+};
+
+export const getProductById = async (id) => {
+  const response = await api.get(`/products/${id}`);
+  return response.data;
+};
+
+export const addProduct = async (product) => {
+  const response = await api.post("/products", product);
+  return response.data;
+};
+
+export const updateProduct = async (id, product) => {
+  const response = await api.put(`/products/${id}`, product);
+  return response.data;
+};
+
+export const deleteProduct = async (id) => {
+  const response = await api.delete(`/products/${id}`);
+  return response.data;
+};
+
+// ORDERS
+
+export const getOrders = async () => {
+  const response = await api.get("/orders");
+  return response.data;
+};
+
+export const getOrderById = async (id) => {
+  const response = await api.get(`/orders/${id}`);
+  return response.data;
+};
