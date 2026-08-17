@@ -102,9 +102,9 @@ function Dashboard() {
       <div className="page-header">
 
         <div>
-          <h1>Dashboard</h1>
+          <h1>DashBoard</h1>
           <p>
-            Welcome to Velora Admin Dashboard
+            Welcome to Velora 
           </p>
         </div>
 
