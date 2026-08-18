@@ -31,7 +31,7 @@ function Products() {
 
   const productsPerPage = 5;
 
-  // FETCH PRODUCTS
+  // fetch products
 
   const fetchProducts = useCallback(async () => {
     try {
@@ -54,7 +54,7 @@ function Products() {
     fetchProducts();
   }, [fetchProducts]);
 
-  // DELETE
+  // delete
 
   const handleDelete = async (id) => {
     const confirmDelete = window.confirm(
@@ -69,36 +69,40 @@ function Products() {
       await deleteProduct(id);
 
       // filter() removes deleted product from state
-      setProducts(
-        products.filter((product) => product.id !== id)
-      );
 
+      setProducts(
+        products.filter(
+          (product) => product.id !== id
+        )
+      );
     } catch (err) {
       alert("Failed to delete product.");
     }
   };
 
-  // FILTER + SORT
+  // filter + sort
 
   const processedProducts = useMemo(() => {
-
     let result = products;
 
-    // SEARCH USING FILTER()
+    // search using filter()
+
     result = result.filter((product) =>
       product.name
         .toLowerCase()
         .includes(search.toLowerCase())
     );
 
-    // CATEGORY FILTER
+    // category filter
+
     result = result.filter((product) =>
       category === "All"
         ? true
         : product.category === category
     );
 
-    // STOCK FILTER
+    // stock filter
+
     result = result.filter((product) => {
       if (stock === "All") {
         return true;
@@ -115,7 +119,8 @@ function Products() {
       return true;
     });
 
-    // SORT
+    // sort
+
     if (sort === "Low to High") {
       result = [...result].sort(
         (a, b) => a.price - b.price
@@ -135,10 +140,15 @@ function Products() {
     }
 
     return result;
+  }, [
+    products,
+    search,
+    category,
+    stock,
+    sort
+  ]);
 
-  }, [products, search, category, stock, sort]);
-
-  // PAGINATION
+  // pagination
 
   const totalPages = Math.ceil(
     processedProducts.length / productsPerPage
@@ -155,7 +165,12 @@ function Products() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [search, category, stock, sort]);
+  }, [
+    search,
+    category,
+    stock,
+    sort
+  ]);
 
   if (loading) {
     return <Loader />;
@@ -168,7 +183,10 @@ function Products() {
 
         <div>
           <h1>Products</h1>
-          <p>Manage your Velora products</p>
+
+          <p>
+            Manage your Velora products
+          </p>
         </div>
 
         <Link
@@ -201,17 +219,26 @@ function Products() {
             setCategory(e.target.value)
           }
         >
-          <option value="All">All Categories</option>
+          <option value="All">
+            All Categories
+          </option>
+
           <option value="Electronics">
             Electronics
           </option>
+
           <option value="Footwear">
             Footwear
           </option>
+
           <option value="Clothing">
             Clothing
           </option>
-          <option value="Bags">Bags</option>
+
+          <option value="Bags">
+            Bags
+          </option>
+
           <option value="Accessories">
             Accessories
           </option>
@@ -223,10 +250,14 @@ function Products() {
             setStock(e.target.value)
           }
         >
-          <option value="All">All Stock</option>
+          <option value="All">
+            All Stock
+          </option>
+
           <option value="In Stock">
             In Stock
           </option>
+
           <option value="Out of Stock">
             Out of Stock
           </option>
@@ -241,12 +272,15 @@ function Products() {
           <option value="Default">
             Sort By
           </option>
+
           <option value="Low to High">
             Price: Low to High
           </option>
+
           <option value="High to Low">
             Price: High to Low
           </option>
+
           <option value="Rating">
             Highest Rating
           </option>
@@ -265,7 +299,9 @@ function Products() {
           <button
             disabled={currentPage === 1}
             onClick={() =>
-              setCurrentPage(currentPage - 1)
+              setCurrentPage(
+                currentPage - 1
+              )
             }
           >
             Previous
@@ -291,9 +327,13 @@ function Products() {
           ))}
 
           <button
-            disabled={currentPage === totalPages}
+            disabled={
+              currentPage === totalPages
+            }
             onClick={() =>
-              setCurrentPage(currentPage + 1)
+              setCurrentPage(
+                currentPage + 1
+              )
             }
           >
             Next

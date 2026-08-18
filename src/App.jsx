@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import {
-  BrowserRouter,
-  Routes,
-  Route
+      BrowserRouter,
+         Routes,
+                Route
 } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
@@ -18,11 +18,11 @@ import OrderDetails from "./pages/OrderDetails";
 
 function App() {
 
-  const [sidebarOpen, setSidebarOpen] =
-    useState(false);
+             const [sidebarOpen, setSidebarOpen] =
+             useState(false);
 
-  return (
-    <BrowserRouter>
+             return (
+       <BrowserRouter>
 
       <div className="app">
 
@@ -49,14 +49,17 @@ function App() {
               element={<Dashboard />}
             />
 
-            <Route
+            <
+              
+              
+              Route
               path="/products"
               element={<Products />}
             />
 
-            <Route
-              path="/products/add"
-              element={<AddProduct />}
+      <Route
+     path="/products/add"
+    element={<AddProduct />}
             />
 
             <Route
@@ -70,10 +73,14 @@ function App() {
             />
 
             <Route
-              path="/orders"
-              element={<Orders />}
-            />
+                     path="/orders"
+                     element={<Orders />}
+                                />
 
+            
+            
+            
+            
             <Route
               path="/orders/:id"
               element={<OrderDetails />}

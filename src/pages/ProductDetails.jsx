@@ -86,7 +86,10 @@ function ProductDetails() {
       <div className="page">
         <div className="empty-state">
           <h2>Product Not Found</h2>
-          <p>The product you are looking for does not exist.</p>
+
+          <p>
+            The product you are looking for does not exist.
+          </p>
 
           <button
             className="primary-btn"
@@ -102,7 +105,7 @@ function ProductDetails() {
   return (
     <div className="page">
 
-      {/* HEADER */}
+      {/* header */}
 
       <div className="page-header">
 
@@ -123,12 +126,11 @@ function ProductDetails() {
 
       </div>
 
-
-      {/* PRODUCT DETAILS */}
+      {/* product details */}
 
       <div className="details-card">
 
-        {/* IMAGE */}
+        {/* image */}
 
         <div className="details-image-container">
 
@@ -140,8 +142,7 @@ function ProductDetails() {
 
         </div>
 
-
-        {/* CONTENT */}
+        {/* content */}
 
         <div className="details-content">
 
@@ -167,11 +168,9 @@ function ProductDetails() {
 
           </div>
 
-
           <h3 className="details-price">
             ₹{Number(product.price || 0).toLocaleString("en-IN")}
           </h3>
-
 
           <div className="stock-info">
 
@@ -189,7 +188,6 @@ function ProductDetails() {
 
           </div>
 
-
           <div className="details-description">
 
             <h3>Description</h3>
@@ -201,8 +199,7 @@ function ProductDetails() {
 
           </div>
 
-
-          {/* ACTION BUTTONS */}
+          {/* action buttons */}
 
           <div className="details-actions">
 

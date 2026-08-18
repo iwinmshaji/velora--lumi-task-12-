@@ -10,7 +10,7 @@ const api = axios.create({
   },
 });
 
-// PRODUCTS
+// products part
 
 export const getProducts = async () => {
   const response = await api.get("/products");
@@ -37,7 +37,7 @@ export const deleteProduct = async (id) => {
   return response.data;
 };
 
-// ORDERS
+//orders
 
 export const getOrders = async () => {
   const response = await api.get("/orders");
